@@ -8,8 +8,11 @@ import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import DoorSection from '@/components/DoorSection';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Index = () => {
+  const { t } = useLanguage();
+  
   return (
     <div className="min-h-screen bg-dark-gradient">
       <Navbar />
@@ -17,8 +20,8 @@ const Index = () => {
       
       <DoorSection 
         id="products" 
-        title="منتجاتنا الملكية"
-        buttonText="افتح باب المنتجات"
+        title={t('royalProducts')}
+        buttonText={t('openProductsDoor')}
         doorColor="from-primary/20 to-secondary/20"
       >
         <Products />
@@ -26,8 +29,8 @@ const Index = () => {
       
       <DoorSection 
         id="why-us" 
-        title="لماذا نحن الأفضل"
-        buttonText="افتح باب التميز"
+        title={t('whyBest')}
+        buttonText={t('openExcellenceDoor')}
         doorColor="from-accent/20 to-primary/20"
       >
         <WhyUs />
@@ -35,8 +38,8 @@ const Index = () => {
       
       <DoorSection 
         id="timeline" 
-        title="رحلتنا عبر الزمن"
-        buttonText="افتح باب التاريخ"
+        title={t('ourJourney')}
+        buttonText={t('openHistoryDoor')}
         doorColor="from-secondary/20 to-accent/20"
       >
         <Timeline />
@@ -44,8 +47,8 @@ const Index = () => {
       
       <DoorSection 
         id="testimonials" 
-        title="آراء عملائنا الكرام"
-        buttonText="افتح باب الشهادات"
+        title={t('clientReviews')}
+        buttonText={t('openTestimonialsDoor')}
         doorColor="from-primary/20 to-primary-glow/20"
       >
         <Testimonials />
@@ -53,8 +56,8 @@ const Index = () => {
       
       <DoorSection 
         id="contact" 
-        title="تواصل مع الملوك"
-        buttonText="افتح باب التواصل"
+        title={t('contactKings')}
+        buttonText={t('openContactDoor')}
         doorColor="from-accent/20 to-secondary/20"
       >
         <Contact />

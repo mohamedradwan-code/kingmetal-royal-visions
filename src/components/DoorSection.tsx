@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { DoorOpen, Crown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface DoorSectionProps {
   id: string;
@@ -15,12 +16,15 @@ interface DoorSectionProps {
 const DoorSection: React.FC<DoorSectionProps> = ({
   id,
   title,
-  buttonText = "افتح الباب",
+  buttonText,
   children,
   className = "",
   doorColor = "from-card to-card-royal"
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useLanguage();
+  
+  const defaultButtonText = buttonText || t('openDoor');
 
   const doorVariants = {
     closed: {
@@ -61,12 +65,12 @@ const DoorSection: React.FC<DoorSectionProps> = ({
       <div className="absolute inset-0 flex items-center justify-center perspective-1000">
         {/* Door Background */}
         <div className="relative w-full h-full max-w-4xl mx-auto">
-          {/* Door Handle Area */}
+          {/* Door Handle Area - Centered but higher */}
           {!isOpen && (
             <motion.div
-              className="absolute top-1/2 left-16 transform -translate-y-1/2 z-20"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
+              className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
             >
               <div className="bg-glossy border-2 border-royal rounded-xl p-6 text-center shadow-royal">
@@ -79,7 +83,7 @@ const DoorSection: React.FC<DoorSectionProps> = ({
                   className="bg-royal-gradient hover:bg-royal-reverse border-royal shadow-glow font-tajawal group"
                 >
                   <DoorOpen className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
-                  {buttonText}
+                  {defaultButtonText}
                 </Button>
               </div>
             </motion.div>
@@ -137,7 +141,7 @@ const DoorSection: React.FC<DoorSectionProps> = ({
                 variant="outline"
                 className="border-royal text-primary hover:bg-primary/10 font-tajawal"
               >
-                أغلق الباب
+                {t('closeDoor')}
               </Button>
             </motion.div>
           </motion.div>

@@ -2,17 +2,20 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Crown, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useLanguage();
 
   const navItems = [
-    { label: 'الرئيسية', href: '#home' },
-    { label: 'المنتجات', href: '#products' },
-    { label: 'لماذا نحن', href: '#why-us' },
-    { label: 'الخط الزمني', href: '#timeline' },
-    { label: 'آراء العملاء', href: '#testimonials' },
-    { label: 'تواصل معنا', href: '#contact' },
+    { label: t('home'), href: '#home' },
+    { label: t('products'), href: '#products' },
+    { label: t('whyUs'), href: '#why-us' },
+    { label: t('timeline'), href: '#timeline' },
+    { label: t('testimonials'), href: '#testimonials' },
+    { label: t('contact'), href: '#contact' },
   ];
 
   const scrollToSection = (href: string) => {
@@ -38,13 +41,14 @@ const Navbar = () => {
           >
             <Crown className="w-8 h-8 text-primary animate-crown-spin" />
             <div className="text-right">
-              <h1 className="text-xl font-bold text-primary font-tajawal">KING METAL</h1>
-              <p className="text-xs text-muted-foreground">ملوك الألوميتال والحدادة</p>
+              <h1 className="text-xl font-bold text-primary font-tajawal">{t('companyName')}</h1>
+              <p className="text-xs text-muted-foreground">{t('companySubtitle')}</p>
             </div>
           </motion.div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8 space-x-reverse">
+            <LanguageSwitcher />
             {navItems.map((item, index) => (
               <motion.button
                 key={index}
@@ -62,7 +66,7 @@ const Navbar = () => {
               className="bg-royal-gradient hover:bg-royal-reverse border-royal shadow-royal hover-lift"
               onClick={() => scrollToSection('#contact')}
             >
-              اتصل بنا الآن
+              {t('contactNow')}
             </Button>
           </div>
 
@@ -97,12 +101,13 @@ const Navbar = () => {
                     {item.label}
                   </motion.button>
                 ))}
+                <LanguageSwitcher />
                 <Button
                   variant="default"
                   className="w-full bg-royal-gradient hover:bg-royal-reverse border-royal shadow-royal"
                   onClick={() => scrollToSection('#contact')}
                 >
-                  اتصل بنا الآن
+                  {t('contactNow')}
                 </Button>
               </div>
             </motion.div>
