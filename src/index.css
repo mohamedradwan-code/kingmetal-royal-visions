@@ -8,89 +8,87 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* KING METAL Royal Design System */
+    --background: 220 12% 6%;
+    --background-glossy: linear-gradient(135deg, 220 12% 6%, 220 15% 8%);
+    --foreground: 0 0% 100%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 12% 8%;
+    --card-foreground: 0 0% 100%;
+    --card-royal: 220 10% 5%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 12% 8%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Royal Gold Primary */
+    --primary: 45 75% 55%;
+    --primary-foreground: 220 12% 6%;
+    --primary-glow: 45 85% 65%;
+    --primary-dark: 45 65% 45%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Luxurious Secondary */
+    --secondary: 30 45% 45%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 30 55% 55%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Accent Blues for Contrast */
+    --accent: 220 85% 45%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 220 75% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Muted Royal */
+    --muted: 220 15% 15%;
+    --muted-foreground: 220 10% 75%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 20% 20%;
+    --border-gold: 45 75% 55%;
+    --input: 220 15% 15%;
+    --ring: 45 75% 55%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Royal Gradients */
+    --gradient-royal: linear-gradient(135deg, hsl(45 75% 55%), hsl(30 45% 45%));
+    --gradient-royal-reverse: linear-gradient(135deg, hsl(30 45% 45%), hsl(45 75% 55%));
+    --gradient-dark: linear-gradient(135deg, hsl(220 12% 6%), hsl(220 15% 12%));
+    --gradient-blue: linear-gradient(135deg, hsl(220 85% 45%), hsl(220 75% 65%));
+    --gradient-glossy: linear-gradient(135deg, hsl(220 12% 6% / 0.95), hsl(220 15% 8% / 0.98));
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Royal Shadows */
+    --shadow-royal: 0 10px 30px -5px hsl(45 75% 55% / 0.3);
+    --shadow-glow: 0 0 40px hsl(45 85% 65% / 0.4);
+    --shadow-deep: 0 25px 50px -12px hsl(220 12% 6% / 0.8);
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Animations */
+    --transition-royal: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar (keeping existing) */
+    --sidebar-background: 220 12% 8%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 45 75% 55%;
+    --sidebar-primary-foreground: 220 12% 6%;
+    --sidebar-accent: 220 15% 15%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 220 20% 20%;
+    --sidebar-ring: 45 75% 55%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Dark mode uses same royal theme - always luxury */
+    --background: 220 12% 4%;
+    --foreground: 0 0% 98%;
+    --card: 220 12% 6%;
+    --card-foreground: 0 0% 98%;
+    --primary: 45 85% 65%;
+    --primary-foreground: 220 12% 4%;
+    --muted: 220 15% 12%;
+    --muted-foreground: 220 10% 70%;
+    --border: 220 20% 18%;
+    --input: 220 15% 12%;
   }
 }
 
@@ -101,5 +99,92 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Tajawal', 'Cairo', 'Arial', sans-serif;
+    direction: rtl;
+    background: var(--gradient-dark);
+    min-height: 100vh;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Royal custom utilities */
+  .bg-royal-gradient {
+    background: var(--gradient-royal);
+  }
+
+  .bg-royal-reverse {
+    background: var(--gradient-royal-reverse);
+  }
+
+  .bg-dark-gradient {
+    background: var(--gradient-dark);
+  }
+
+  .bg-blue-gradient {
+    background: var(--gradient-blue);
+  }
+
+  .bg-glossy {
+    background: var(--gradient-glossy);
+    backdrop-filter: blur(20px);
+  }
+
+  .shadow-royal {
+    box-shadow: var(--shadow-royal);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .shadow-deep {
+    box-shadow: var(--shadow-deep);
+  }
+
+  .transition-royal {
+    transition: var(--transition-royal);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .text-shadow-royal {
+    text-shadow: 0 2px 10px hsl(45 75% 55% / 0.3);
+  }
+
+  .border-royal {
+    border-color: hsl(var(--border-gold));
+  }
+
+  .hover-lift {
+    transition: var(--transition-royal);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-royal);
+  }
+
+  .royal-shine {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .royal-shine::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, hsl(45 75% 55% / 0.2), transparent);
+    transition: left 0.6s;
+  }
+
+  .royal-shine:hover::before {
+    left: 100%;
   }
 }
