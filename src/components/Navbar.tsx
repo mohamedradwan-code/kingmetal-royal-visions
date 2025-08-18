@@ -39,7 +39,7 @@ const Navbar = () => {
             <Crown className="w-8 h-8 text-primary animate-crown-spin" />
             <div className="text-right">
               <h1 className="text-xl font-bold text-primary font-tajawal">KING METAL</h1>
-              <p className="text-xs text-muted-foreground">ملوك الألوميتال</p>
+              <p className="text-xs text-muted-foreground">ملوك الألوميتال والحدادة</p>
             </div>
           </motion.div>
 

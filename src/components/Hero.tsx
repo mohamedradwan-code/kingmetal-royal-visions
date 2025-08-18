@@ -68,7 +68,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.8 }}
           >
-            ملوك الألوميتال في مصر
+            ملوك الألوميتال والحدادة في مصر
           </motion.h2>
 
           {/* Description */}
@@ -78,7 +78,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9, duration: 0.8 }}
           >
-            تصنيع وتركيب الأبواب الأمان والنوافذ الألوميتال بأعلى جودة وتصميم ملكي فاخر
+            تصنيع وتركيب الأبواب الأمان والنوافذ الألوميتال والحدادة بأعلى جودة وتصميم ملكي فاخر
           </motion.p>
 
           {/* Call to Action Buttons */}

@@ -52,13 +52,13 @@ const Footer = () => {
               <Crown className="w-10 h-10 text-primary animate-royal-glow" />
               <div className="text-right">
                 <h3 className="text-2xl font-bold text-primary font-tajawal">KING METAL</h3>
-                <p className="text-sm text-muted-foreground font-tajawal">ملوك الألوميتال في مصر</p>
+                <p className="text-sm text-muted-foreground font-tajawal">ملوك الألوميتال والحدادة في مصر</p>
               </div>
             </div>
 
             {/* Description */}
             <p className="text-muted-foreground font-tajawal leading-relaxed text-right">
-              نحن متخصصون في تصنيع وتركيب منتجات الألوميتال عالية الجودة بتصميمات ملكية فاخرة تضفي لمسة من الأناقة والأمان على مكانك.
+              نحن متخصصون في تصنيع وتركيب منتجات الألوميتال والحدادة عالية الجودة بتصميمات ملكية فاخرة تضفي لمسة من الأناقة والأمان على مكانك.
             </p>
 
             {/* Social Links */}

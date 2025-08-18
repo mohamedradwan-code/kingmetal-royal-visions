@@ -187,4 +187,12 @@ All colors MUST be HSL.
   .royal-shine:hover::before {
     left: 100%;
   }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .bg-gradient-radial {
+    background: radial-gradient(circle, var(--tw-gradient-stops));
+  }
 }
