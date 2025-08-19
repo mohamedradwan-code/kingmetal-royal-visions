@@ -108,6 +108,20 @@ export default {
 					'0%': { transform: 'rotate(0deg) scale(1)' },
 					'50%': { transform: 'rotate(180deg) scale(1.1)' },
 					'100%': { transform: 'rotate(360deg) scale(1)' }
+				},
+				'door-swing': {
+					'0%': { transform: 'perspective(2000px) rotateY(0deg)' },
+					'100%': { transform: 'perspective(2000px) rotateY(-110deg)' }
+				},
+				'handle-turn': {
+					'0%': { transform: 'rotate(0deg)' },
+					'50%': { transform: 'rotate(-25deg)' },
+					'100%': { transform: 'rotate(0deg)' }
+				},
+				'key-insert': {
+					'0%': { transform: 'translateX(0) rotate(0deg)' },
+					'50%': { transform: 'translateX(5px) rotate(45deg)' },
+					'100%': { transform: 'translateX(0) rotate(90deg)' }
 				}
 			},
 			animation: {
@@ -117,7 +131,10 @@ export default {
 				'royal-glow': 'royal-glow 2s ease-in-out infinite',
 				'float': 'float 3s ease-in-out infinite',
 				'slide-up': 'slide-up 0.8s ease-out',
-				'crown-spin': 'crown-spin 4s ease-in-out infinite'
+				'crown-spin': 'crown-spin 4s ease-in-out infinite',
+				'door-swing': 'door-swing 1.5s cubic-bezier(0.23, 1, 0.32, 1)',
+				'handle-turn': 'handle-turn 0.6s ease-in-out',
+				'key-insert': 'key-insert 1s ease-in-out'
 			}
 		}
 	},
