@@ -86,7 +86,9 @@ const translations = {
     phoneWhatsapp: 'رقم الهاتف / واتساب',
     facebook: 'فيسبوك',
     callNow: 'اتصل الآن',
-    whatsappNow: 'واتساب'
+    whatsappNow: 'واتساب',
+    workingHours: 'ساعات العمل',
+    workingHoursText: 'السبت - الخميس: 9 صباحاً - 6 مساءً'
   },
   en: {
     // Navbar
@@ -163,7 +165,9 @@ const translations = {
     phoneWhatsapp: 'Phone / WhatsApp',
     facebook: 'Facebook',
     callNow: 'Call Now',
-    whatsappNow: 'WhatsApp'
+    whatsappNow: 'WhatsApp',
+    workingHours: 'Working Hours',
+    workingHoursText: 'Saturday - Thursday: 9 AM - 6 PM'
   }
 };
 

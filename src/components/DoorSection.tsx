@@ -78,7 +78,7 @@ const DoorSection: React.FC<DoorSectionProps> = ({
       <div className="absolute inset-0 flex items-center justify-center" style={{ perspective: "2000px" }}>
         <div className="relative w-full h-full max-w-6xl mx-auto">
           
-          {/* Door Handle & Lock Area - Only when closed */}
+          {/* Door Button - Center of Section */}
           {!isOpen && (
             <motion.div
               className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30"
@@ -87,12 +87,17 @@ const DoorSection: React.FC<DoorSectionProps> = ({
               transition={{ delay: 0.3, duration: 0.6 }}
             >
               <div className="bg-gradient-to-br from-background/95 to-card/95 backdrop-blur-xl border-2 border-primary/30 rounded-2xl p-8 text-center shadow-2xl">
+                {/* Logo as Crown */}
                 <motion.div
                   className="flex justify-center mb-6"
                   animate={{ rotate: [0, 5, -5, 0] }}
                   transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                 >
-                  <Crown className="w-12 h-12 text-primary animate-royal-glow" />
+                  <div className="w-16 h-16 relative">
+                    <div className="absolute inset-0 bg-gradient-to-br from-amber-400 via-yellow-500 to-amber-600 rounded-lg flex items-center justify-center shadow-xl border-2 border-amber-300">
+                      <span className="text-2xl font-bold text-zinc-900 font-tajawal">KM</span>
+                    </div>
+                  </div>
                 </motion.div>
                 
                 <h3 className="text-2xl font-bold text-primary font-tajawal mb-4">

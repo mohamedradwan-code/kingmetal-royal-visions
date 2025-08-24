@@ -10,6 +10,7 @@ const Footer = () => {
     { label: 'لماذا نحن', href: '#why-us' },
     { label: 'الخط الزمني', href: '#timeline' },
     { label: 'آراء العملاء', href: '#testimonials' },
+    { label: 'معرض الأعمال', href: '#works' },
     { label: 'تواصل معنا', href: '#contact' }
   ];
 
@@ -48,8 +49,10 @@ const Footer = () => {
             transition={{ duration: 0.6 }}
           >
             {/* Logo */}
-            <div className="flex items-center space-x-2 space-x-reverse">
-              <Crown className="w-10 h-10 text-primary animate-royal-glow" />
+            <div className="flex items-center space-x-4 space-x-reverse">
+              <div className="w-12 h-12 bg-gradient-to-br from-amber-400 via-yellow-500 to-amber-600 rounded-lg flex items-center justify-center shadow-xl border-2 border-amber-300">
+                <span className="text-xl font-bold text-zinc-900 font-tajawal">KM</span>
+              </div>
               <div className="text-right">
                 <h3 className="text-2xl font-bold text-primary font-tajawal">KING METAL</h3>
                 <p className="text-sm text-muted-foreground font-tajawal">ملوك الألوميتال والحدادة في مصر</p>
@@ -138,24 +141,40 @@ const Footer = () => {
               <div className="flex items-center space-x-3 space-x-reverse">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
                 <div className="text-right">
-                  <p className="text-muted-foreground font-tajawal">+20 100 123 4567</p>
-                  <p className="text-muted-foreground font-tajawal">+20 101 234 5678</p>
+                  <p className="text-muted-foreground font-tajawal">+20 11 15499159</p>
                 </div>
               </div>
               
               <div className="flex items-center space-x-3 space-x-reverse">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
                 <div className="text-right">
-                  <p className="text-muted-foreground font-tajawal">info@kingmetal.com</p>
-                  <p className="text-muted-foreground font-tajawal">sales@kingmetal.com</p>
+                  <p className="text-muted-foreground font-tajawal">Kingmetal159@gmail.com</p>
                 </div>
               </div>
               
               <div className="flex items-start space-x-3 space-x-reverse">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                <div className="text-right space-y-2">
+                  <p className="text-muted-foreground font-tajawal font-semibold">المصنع:</p>
+                  <p className="text-muted-foreground font-tajawal">مدينة بدر – المنطقة الصناعية – مجمع التطبيقات</p>
+                  <p className="text-muted-foreground font-tajawal font-semibold">العنوان الثاني:</p>
+                  <p className="text-muted-foreground font-tajawal">الحي الثاني – مول ضيوف الرحمن – بجوار السنتر الأحمر</p>
+                  <p className="text-muted-foreground font-tajawal font-semibold">عنوان المكتب:</p>
+                  <p className="text-muted-foreground font-tajawal">مدينة الشروق – حي النرجس – مول اسكوير فايف</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center space-x-3 space-x-reverse">
+                <Facebook className="w-5 h-5 text-primary flex-shrink-0" />
                 <div className="text-right">
-                  <p className="text-muted-foreground font-tajawal">شارع الصناعة، مدينة العبور</p>
-                  <p className="text-muted-foreground font-tajawal">القاهرة، جمهورية مصر العربية</p>
+                  <a 
+                    href="https://www.facebook.com/profile.php?id=61558336842967" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground font-tajawal hover:text-primary transition-colors"
+                  >
+                    صفحتنا على فيسبوك
+                  </a>
                 </div>
               </div>
             </div>
@@ -196,7 +215,9 @@ const Footer = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          <Crown className="w-6 h-6 text-primary-foreground" />
+          <div className="w-6 h-6 bg-gradient-to-br from-amber-400 to-amber-600 rounded flex items-center justify-center">
+            <span className="text-xs font-bold text-zinc-900">KM</span>
+          </div>
         </motion.button>
       </div>
     </footer>

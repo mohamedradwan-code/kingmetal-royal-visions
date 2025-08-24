@@ -15,6 +15,7 @@ const Navbar = () => {
     { label: t('whyUs'), href: '#why-us' },
     { label: t('timeline'), href: '#timeline' },
     { label: t('testimonials'), href: '#testimonials' },
+    { label: 'معرض الأعمال', href: '#works' },
     { label: t('contact'), href: '#contact' },
   ];
 
@@ -36,10 +37,12 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <motion.div
-            className="flex items-center space-x-2 space-x-reverse"
+            className="flex items-center space-x-4 space-x-reverse"
             whileHover={{ scale: 1.05 }}
           >
-            <Crown className="w-8 h-8 text-primary animate-crown-spin" />
+            <div className="w-10 h-10 bg-gradient-to-br from-amber-400 via-yellow-500 to-amber-600 rounded-lg flex items-center justify-center shadow-xl border-2 border-amber-300">
+              <span className="text-lg font-bold text-zinc-900 font-tajawal">KM</span>
+            </div>
             <div className="text-right">
               <h1 className="text-xl font-bold text-primary font-tajawal">{t('companyName')}</h1>
               <p className="text-xs text-muted-foreground">{t('companySubtitle')}</p>

@@ -8,6 +8,7 @@ import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import DoorSection from '@/components/DoorSection';
+import WorksGallery from '@/components/WorksGallery';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Index = () => {
@@ -52,6 +53,15 @@ const Index = () => {
         doorColor="from-primary/20 to-primary-glow/20"
       >
         <Testimonials />
+      </DoorSection>
+      
+      <DoorSection 
+        id="works" 
+        title="معرض أعمالنا الملكية"
+        buttonText="افتح معرض الأعمال"
+        doorColor="from-purple/20 to-accent/20"
+      >
+        <WorksGallery />
       </DoorSection>
       
       <DoorSection 

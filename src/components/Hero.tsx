@@ -39,14 +39,16 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="space-y-8"
         >
-          {/* Crown Icon */}
+          {/* Main Logo */}
           <motion.div
-            className="flex justify-center mb-6"
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.3, type: "spring", stiffness: 300 }}
+            className="flex justify-center mb-8"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.2 }}
           >
-            <Crown className="w-16 h-16 text-primary animate-royal-glow" />
+            <div className="w-24 h-24 bg-gradient-to-br from-amber-400 via-yellow-500 to-amber-600 rounded-2xl flex items-center justify-center shadow-2xl border-4 border-amber-300 animate-royal-glow">
+              <span className="text-3xl font-bold text-zinc-900 font-tajawal">KM</span>
+            </div>
           </motion.div>
 
           {/* Main Title */}

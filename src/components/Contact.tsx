@@ -19,7 +19,8 @@ const contactInfo = [
     icon: Mail,
     title: "emailAddress",
     details: "Kingmetal159@gmail.com",
-    color: "from-green-500 to-emerald-500"
+    color: "from-green-500 to-emerald-500",
+    isEmail: true
   },
   {
     icon: MapPin,
@@ -41,8 +42,8 @@ const contactInfo = [
   },
   {
     icon: Clock,
-    title: "ساعات العمل",
-    details: "السبت - الخميس: 9 صباحاً - 6 مساءً",
+    title: "workingHours",
+    details: "workingHoursText",
     color: "from-orange-500 to-red-500"
   }
 ];
@@ -148,6 +149,15 @@ const Contact = () => {
                                 </Button>
                               </div>
                             </div>
+                          ) : info.isEmail ? (
+                            <div className="space-y-2">
+                              <a 
+                                href={`mailto:${info.details}`}
+                                className="text-muted-foreground font-tajawal hover:text-primary transition-colors"
+                              >
+                                {info.details}
+                              </a>
+                            </div>
                           ) : (
                             <p className="text-muted-foreground font-tajawal">
                               {typeof info.details === 'string' && info.details.startsWith('http') ? (
@@ -155,13 +165,6 @@ const Contact = () => {
                                   href={info.details} 
                                   target="_blank" 
                                   rel="noopener noreferrer"
-                                  className="hover:text-primary transition-colors"
-                                >
-                                  {info.details}
-                                </a>
-                              ) : info.details.includes('@') ? (
-                                <a 
-                                  href={`mailto:${info.details}`}
                                   className="hover:text-primary transition-colors"
                                 >
                                   {info.details}
