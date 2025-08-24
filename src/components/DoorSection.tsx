@@ -36,14 +36,15 @@ const DoorSection: React.FC<DoorSectionProps> = ({
       rotateY: -110,
       transformOrigin: "right center",
       scale: 1,
-      transition: {
-        duration: 1.5,
-        ease: [0.23, 1, 0.32, 1],
-        type: "spring",
-        stiffness: 80,
-        damping: 20
-      }
     }
+  };
+
+  const doorTransition = {
+    duration: 1.5,
+    ease: [0.23, 1, 0.32, 1] as [number, number, number, number],
+    type: "spring" as const,
+    stiffness: 80,
+    damping: 20
   };
 
   const contentVariants = {
@@ -56,12 +57,13 @@ const DoorSection: React.FC<DoorSectionProps> = ({
       opacity: 1,
       scale: 1,
       y: 0,
-      transition: {
-        duration: 0.8,
-        delay: 0.8,
-        ease: "easeOut"
-      }
     }
+  };
+
+  const contentTransition = {
+    duration: 0.8,
+    delay: 0.8,
+    ease: "easeOut" as const
   };
 
   const handleVariants = {
@@ -126,6 +128,7 @@ const DoorSection: React.FC<DoorSectionProps> = ({
             className="absolute inset-8 bg-gradient-to-br from-zinc-800 via-zinc-700 to-zinc-900 rounded-lg shadow-2xl overflow-hidden"
             variants={doorVariants}
             animate={isOpen ? "open" : "closed"}
+            transition={doorTransition}
             style={{ 
               transformStyle: "preserve-3d",
               backfaceVisibility: "hidden"
@@ -196,6 +199,7 @@ const DoorSection: React.FC<DoorSectionProps> = ({
             initial="hidden"
             animate="visible"
             exit="hidden"
+            transition={contentTransition}
           >
             {children}
             

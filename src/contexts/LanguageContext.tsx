@@ -72,7 +72,21 @@ const translations = {
     phone: 'الهاتف',
     email: 'البريد الإلكتروني',
     address: 'العنوان',
-    addressText: 'القاهرة، مصر'
+    addressText: 'القاهرة، مصر',
+    
+    // Contact Details
+    companyFullName: 'شركة كينج ميتال للحدادة والألوميتال',
+    factoryAddress: 'المصنع',
+    factoryLocation: 'مدينة بدر – المنطقة الصناعية – مجمع التطبيقات',
+    secondAddress: 'العنوان الثاني',
+    secondLocation: 'الحي الثاني – مول ضيوف الرحمن – بجوار السنتر الأحمر',
+    officeAddress: 'عنوان المكتب',
+    officeLocation: 'مدينة الشروق – حي النرجس – مول اسكوير فايف',
+    emailAddress: 'البريد الإلكتروني',
+    phoneWhatsapp: 'رقم الهاتف / واتساب',
+    facebook: 'فيسبوك',
+    callNow: 'اتصل الآن',
+    whatsappNow: 'واتساب'
   },
   en: {
     // Navbar
@@ -135,7 +149,21 @@ const translations = {
     phone: 'Phone',
     email: 'Email',
     address: 'Address',
-    addressText: 'Cairo, Egypt'
+    addressText: 'Cairo, Egypt',
+    
+    // Contact Details
+    companyFullName: 'King Metal Company for Metalwork & Aluminum',
+    factoryAddress: 'Factory',
+    factoryLocation: 'Badr City - Industrial Zone - Applications Complex',
+    secondAddress: 'Second Address',
+    secondLocation: 'Second District - Dhuyuf Al Rahman Mall - Next to Red Center',
+    officeAddress: 'Office Address',
+    officeLocation: 'Shorouk City - Narcissus District - Square Five Mall',
+    emailAddress: 'Email',
+    phoneWhatsapp: 'Phone / WhatsApp',
+    facebook: 'Facebook',
+    callNow: 'Call Now',
+    whatsappNow: 'WhatsApp'
   }
 };
 
